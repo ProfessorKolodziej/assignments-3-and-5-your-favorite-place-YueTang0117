@@ -1,11 +1,331 @@
-@media screen and (width >= 320px) {
+.webpage {
+	font-size: 20px;
+	background-image: url("css/background.webp");
+	background-size: cover;
+	background-position: center;
+	background-repeat: repeat;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.page_title_container {
+	position: relative;
+}
+
+.page_title {
+	font-family: "Kings";
+	font-weight: 400;
+	font-style: normal;
+	font-size: 6rem;
+	margin: 0;
+	padding: 0;
+	color: white;
+	-webkit-text-stroke: 1px #5AA597;
+	filter: drop-shadow(2px 2px 2px #4e4e4e);
+	position: absolute;
+	top: 40%;
+	width: 100%;
+	text-align: center;
+}
+
+.page_title_background {
+	width: 100%;
+}
+
+.page_introduction {
+	font-family: "IM Fell English", serif;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 2rem;
+	margin-top: 10%;;
+	}
+
+.attractions_heading,.tips_heading,.cuisine_heading {
+	font-family: "Kings";
+	font-weight: 400;
+	font-style: normal;
+	font-size: 4rem;
+	margin-left: 3%;
+}
+.attraction_1,.attraction_2, .attraction_3, .attraction_4, .attraction_5 {
+	font-family: "IM Fell English SC", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.attraction_text {
+	font-family: "IM Fell English", serif;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 2rem;
+}
+
+.attraction_photo{
+	width: 50%;
+}
+
+.tips,.cuisine-item{
+	font-family: "IM Fell English", serif;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 2rem;
+}
+
+
+/*layout*/
+.page_title_container {
+	grid-column: 1/span 4;
+}
+
+.page_introduction {
+	grid-column: 2/span 2;
+}
+
+.attractions_heading {
+	grid-column: 1/span 4;
+}
+
+.carousel {
+	grid-column: 1/span 4;
+}
+.tips_heading,.tips {
+   grid-column: 1/span 4;
+}
+
+.cuisine_heading {
+	grid-column: 1/span 4;
+}
+
+.cuisine-container {
+	grid-column: 1/span 4;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+ }
+
+ .cuisine-item {
+	text-align: center;
+ }
+
+ .cuisine-item img {
+	max-width: 100%;
+	height: auto;
+ }
+	/*carousel*/
+@keyframes tonext {
+	75% {
+	  left: 0;
+	}
+	95% {
+	  left: 100%;
+	}
+	98% {
+	  left: 100%;
+	}
+	99% {
+	  left: 0;
+	}
+ }
+
+ @keyframes tostart {
+	75% {
+	  left: 0;
+	}
+	95% {
+	  left: -300%;
+	}
+	98% {
+	  left: -300%;
+	}
+	99% {
+	  left: 0;
+	}
+ }
+
+ @keyframes snap {
+	96% {
+	  scroll-snap-align: center;
+	}
+	97% {
+	  scroll-snap-align: none;
+	}
+	99% {
+	  scroll-snap-align: none;
+	}
+	100% {
+	  scroll-snap-align: center;
+	}
+ }
+ .carousel {
+	margin-left: 5%;
+	margin-right: 5%;
+ }
+
+ * {
+	box-sizing: border-box;
+	scrollbar-color: transparent transparent;
+	scrollbar-width: 0px;
+ }
+
+ *::-webkit-scrollbar {
+	width: 0;
+ }
+
+ *::-webkit-scrollbar-track {
+	background: transparent;
+ }
+
+ *::-webkit-scrollbar-thumb {
+	background: transparent;
+	border: none;
+ }
+
+ * {
+	-ms-overflow-style: none;
+ }
+
+ ol, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+ }
+
+ .carousel {
+	position: relative;
+	padding-top: 75%;
+	filter: drop-shadow(0 0 10px #0003);
+	perspective: 100px;
+ }
+
+ .carousel__viewport {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	overflow-x: scroll;
+	counter-reset: item;
+	scroll-behavior: smooth;
+	scroll-snap-type: x mandatory;
+ }
+
+ .carousel__slide {
+	position: relative;
+	flex: 0 0 100%;
+	width: 100%;
+	height: 40rem;
+	margin-bottom: 0;
+	background-image: url("css/background.webp");
+	counter-increment: item;
+ }
+
+
+
+ .carousel__slide:nth-child(even) {
+	background-color: none;
+ }
+
+ .carousel__snapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	scroll-snap-align: center;
+ }
+
+ @media (hover: hover) {
+	.carousel__snapper {
+	  animation-name: tonext, snap;
+	  animation-timing-function: ease;
+	  animation-duration: 4s;
+	  animation-iteration-count: infinite;
+	}
+
+	.carousel__slide:last-child .carousel__snapper {
+	  animation-name: tostart, snap;
+	}
+ }
+
+ @media (prefers-reduced-motion: reduce) {
+	.carousel__snapper {
+	  animation-name: none;
+	}
+ }
+
+ .carousel:hover .carousel__snapper,
+ .carousel:focus-within .carousel__snapper {
+	animation-name: none;
+ }
+
+ .carousel::before,
+ .carousel::after,
+ .carousel__prev,
+ .carousel__next {
+	position: absolute;
+	top: 0;
+	margin-top: 30%;
+	width: 4rem;
+	height: 4rem;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	font-size: 0;
+	outline: 0;
+ }
+
+ .carousel::before,
+ .carousel__prev {
+	left: -1rem;
+ }
+
+ .carousel::after,
+ .carousel__next {
+	right: -1rem;
+ }
+
+ .carousel::before,
+ .carousel::after {
+	content: '';
+	z-index: 1;
+	background-color: #333;
+	background-size: 1.5rem 1.5rem;
+	background-repeat: no-repeat;
+	background-position: center center;
+	color: #fff;
+	font-size: 2.5rem;
+	line-height: 4rem;
+	text-align: center;
+	pointer-events: none;
+ }
+
+ .carousel::before {
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+ }
+
+ .carousel::after {
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+ }
+
+
+@media screen and (min-width: 1024px) {
 	#some-id {
 		color: red;
 	}
 }
 
-@media screen and (width >= 500px) {
+@media screen and (min-width: 768px) and (max-width:1023px) {
 	#some-id {
-		color: red;
+		color: blue;
+	}
+}
+
+@media screen and (max-width: 767px)  {
+	#some-id {
+		color: yellow;
 	}
 }

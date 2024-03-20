@@ -6,7 +6,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Description here" />
 	<title>Sightseeing Guide to Hyrule</title>
-	<!--
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kings&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Kings&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Kings&display=swap" rel="stylesheet">
+  <!--
 		You can connect the CSS to the HTML here,
 		inside the head tag. Here is an example:
 		https://www.w3schools.com/tags/tag_link.asp
@@ -17,85 +27,163 @@
 	-->
 </head>
 <body>
-	<h1>Hyrule</h1>
-	<p>Welcome to this historic magical continent. The beautifully untouched snowy mountains, rainforests, waterfalls and volcanoes are waiting to be explored...but do watch out for the wandering monsters! Click <a href="https://www.ign.com/maps/the-legend-of-zelda-tears-of-the-kingdom/hyrule"> here </a>for the map</p>
-  <h2>Top Attractions</h2>
-  <ol>
-    <li>Goron City
-      <p>Nestled at the foot of a volcano,
-the city is famous for its open-air
-hot springs and barbecues. Don't
-miss the Simmerstone Springs
-(recommended by locals) to heal
-your body and mind in the steaming
-heat. The people here are as
-passionate as fire too!</p>
-    </li>
-    <li>Satori Mountain
-      <p>Come here to see the most beautiful cherry blossom tree in the entire continent. Located in the southwest of Hyrule, Satori Mountain is a natural reserve for flora and fauna.
-It is said that by offering a piece of
-fruit to the altar on the mountain top,
-you will be blessed by the mountain
-god. </p>
-    </li>
-    <li>Temple of Time
-      <p>Behold, the spectacular clock tower from 10,000 years ago. History is
-touchable here. Since it's located on
-the sky island, you can look down on
-the entire continent or even bungee
-jump. Hopefully you're not afraid of
-heights!</p>
-    </li>
-    <li>Lurelin Village
-      <p>It has a intoxicating tropical scenery,
-as well as the most welcoming and
-friendly villagers. You may enjoy the
-sunrise at the beach at 5 a.m., savor
-the local specialty of seafood risotto,
-and take a salt bath at the inn. It's a
-perfect place for vacation.</p>
-    </li>
-    <li>Hebra Mountain
-      <p>Hebra Mountain is famous for its ski resorts, but do you know that it is also a destination for explorers?
-In addition to the dangerous climate,
-there are intricate caves, mysterious
-treasures, as well as wandering
-monsters. Remember not to mess
-with moose and grizzly bears!</p>
-    </li>
-  </ol>
- <h2>Tips</h2>
-  <ul>
-    <li>Climate is distinct in each region, stay warm and be careful of heat stroke</li>
-    <li>Watch out for the fierce wild
-animals</li>
-    <li>Stay away from the monsters' lair</li>
-    <li>Horses can be rented at the
-stagecoach station</li>
-    <li>Take enough food with you
-whenever you go out</li>
-  </ul>
-<h2>Local Cuisine</h2>
-<ol>
-  <li>Creamy Seafood Soup</li>
-  <li>Gourmet Spiced Meat Skewer</li>
-  <li>Monster Stew</li>
-  <li>Noble Pursuit</li>
-</ol>
-	<!--
-	This is an HTML comment.
-	It is optional, and you can delete it or use it to
-	source help you get from AI tools like ChatGPT.
+	<section class="webpage">
+      <div class="page_title_container">
+		   <img class="page_title_background" src="images/hyrule.png" alt="hyrule">
+		   <h1 class="page_title">Hyrule</h1>
+		</div>
 
-	Make sure all of your content is inside the body tag.
+		<p class="page_introduction">Welcome to this historic magical continent. The beautifully untouched snowy mountains, rainforests, waterfalls and volcanoes are waiting to be explored...but do watch out for the wandering monsters! Click <a href="https://www.ign.com/maps/the-legend-of-zelda-tears-of-the-kingdom/hyrule"> here </a>for the map</p>
 
-	If you'd like to add an image, save it to the images
-	folder. Then, add an img tag. Here is an example:
-	https://www.w3schools.com/tags/tag_img.asp
+	   <h2 class="attractions_heading">Top Attractions</h2>
+		   <section class="carousel">
+			   <ol class="carousel__viewport">
+			      <li id="carousel__slide1"
+					    tabindex="0"
+					    class="carousel__slide">
+				      <div class="carousel__snapper">
+					      <ol>
+				            <li class="attraction_1">Goron City
+				      	      <p class="attraction_text">Nestled at the foot of a volcano,
+		                     the city is famous for its open-air
+		                     hot springs and barbecues. Don't
+		                     miss the Simmerstone Springs
+		                     (recommended by locals) to heal
+		                     your body and mind in the steaming
+		                     heat. The people here are as
+		                     passionate as fire too!</p>
+				            </li>
+			            </ol>
+					      <img class="attraction_photo" src="images/goron-city.jpg" alt="goron_city">
+					   </div>
+					   <a href="#carousel__slide5"
+						class="carousel__prev">Go to last slide</a>
+					   <a href="#carousel__slide2"
+						class="carousel__next">Go to next slide</a>
+			      </li>
 
-	Like your CSS link above, you are linking to a file
-	inside a folder in this project, so you'll need to link
-	to "images/your-image-name.jpg" for the image to show.
-	-->
+			      <li id="carousel__slide2"
+					  tabindex="0"
+					  class="carousel__slide">
+				      <div class="carousel__snapper">
+					      <ol>
+				            <li class="attraction_2">Satori Mountain
+					            <p class="attraction_text">Come here to see the most beautiful cherry blossom tree in the entire continent. Located in the southwest of Hyrule, Satori Mountain is a natural reserve for flora and fauna.
+		                     It is said that by offering a piece of
+		                     fruit to the altar on the mountain top,
+		                     you will be blessed by the mountain.</p>
+				            </li>
+			            </ol>
+					      <img class="attraction_photo" src="images/satori-mountain.jpg" alt="satori_mountain">
+				      </div>
+				      <a href="#carousel__slide1"
+					   class="carousel__prev">Go to previous slide</a>
+				      <a href="#carousel__slide3"
+					   class="carousel__next">Go to next slide</a>
+			      </li>
+
+
+			      <li id="carousel__slide3"
+					    tabindex="0"
+					    class="carousel__slide">
+				      <div class="carousel__snapper">
+					      <ol>
+				            <li class="attraction_3">Temple of Time
+					            <p class="attraction_text">Behold, the spectacular clock tower from 10,000 years ago. History is
+		                     touchable here. Since it's located on
+		                     the sky island, you can look down on
+		                     the entire continent or even bungee
+		                     jump. Hopefully you're not afraid of
+		                     heights!</p>
+				            </li>
+			            </ol>
+					      <img class="attraction_photo" src="images/temple-of-time.jpg" alt="temple_of_time">
+				      </div>
+				      <a href="#carousel__slide2"
+					   class="carousel__prev">Go to previous slide</a>
+				      <a href="#carousel__slide4"
+					   class="carousel__next">Go to next slide</a>
+			      </li>
+
+
+			      <li id="carousel__slide4"
+					    tabindex="0"
+					    class="carousel__slide">
+				      <div class="carousel__snapper">
+					      <ol>
+				            <li class="attraction_4">Lurelin Village
+				             	<p class="attraction_text">It has a intoxicating tropical scenery,
+		                     as well as the most welcoming and
+		                     friendly villagers. You may enjoy the
+		                     sunrise at the beach at 5 a.m., savor
+		                     the local specialty of seafood risotto,
+		                     and take a salt bath at the inn. It's a
+		                     perfect place for vacation.</p>
+		 		            </li>
+			            </ol>
+					      <img class="attraction_photo" src="images/lurelin-village.jpg" alt="lurelin_village">
+				      </div>
+			         <a href="#carousel__slide3"
+					   class="carousel__prev">Go to previous slide</a>
+				      <a href="#carousel__slide5"
+					   class="carousel__next">Go to next slide</a>
+			      </li>
+
+			      <li id="carousel__slide5"
+					    tabindex="0"
+					    class="carousel__slide">
+				      <div class="carousel__snapper">
+				      	<ol>
+			               <li class="attraction_5">Hebra Mountain
+					            <p class="attraction_text">Hebra Mountain is famous for its ski resorts, but do you know that it is also a destination for explorers?
+		                     In addition to the dangerous climate,
+		                     there are intricate caves, mysterious
+		                     treasures, as well as wandering
+		                     monsters. Remember not to mess
+		                     with moose and grizzly bears!</p>
+				            </li>
+			            </ol>
+				         <img class="attraction_photo" src="images/hebra-mountain.jpg" alt="hebra_mountain">
+				      </div>
+				      <a href="#carousel__slide4"
+					   class="carousel__prev">Go to previous slide</a>
+				      <a href="#carousel__slide1"
+					   class="carousel__next">Go to first slide</a>
+		    </section>
+
+      <h2 class="tips_heading">Tips</h2>
+      <div class="tips">
+		      <ul>
+               <li>Climate is distinct in each region, stay warm and be careful of heat stroke</li>
+               <li>Watch out for the fierce wild
+               animals</li>
+               <li>Stay away from the monsters' lair</li>
+               <li>Horses can be rented at the
+               stagecoach station</li>
+               <li>Take enough food with you
+               whenever you go out</li>
+            </ul>
+			</div>
+
+		<h2 class="cuisine_heading">Local Cuisine</h2>
+		<div class="cuisine-container">
+			<div class="cuisine-item">
+			  <img src="images/creamy-seafood-soup.png" alt="Creamy Seafood Soup">
+			  <p>Creamy Seafood Soup</p>
+			</div>
+			<div class="cuisine-item">
+			  <img src="images/gourmet-spiced-meat-skewer.png" alt="Gourmet Spiced Meat Skewer">
+			  <p>Gourmet Spiced Meat Skewer</p>
+			</div>
+			<div class="cuisine-item">
+			  <img src="images/monster-stew.png" alt="Monster Stew">
+			  <p>Monster Stew</p>
+			</div>
+			<div class="cuisine-item">
+			  <img src="images/noble-pursuit.png" alt="Noble Pursuit">
+			  <p>Noble Pursuit</p>
+			</div>
+		 </div>
+   </section>
 </body>
 </html>
