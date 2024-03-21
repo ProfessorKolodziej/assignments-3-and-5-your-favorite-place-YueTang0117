@@ -51,10 +51,42 @@
 	font-size: 4rem;
 	margin-left: 3%;
 }
-.attraction_1,.attraction_2, .attraction_3, .attraction_4, .attraction_5 {
+
+.attractions_heading::after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	left: 30%;
+	width: 5%;
+	height: 50px;
+	background-color: #5AA597;
+ }
+
+ .tips_heading::after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	left: 7%;
+	width: 8%;
+	height: 50px;
+	background-color: #5AA597;
+ }
+
+ .cuisine_heading::after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	left: 25%;
+	width: 7%;
+	height: 50px;
+	background-color: #5AA597;
+ }
+
+.attraction {
 	font-family: "IM Fell English SC", serif;
 	font-weight: 400;
 	font-style: normal;
+	font-size: 4rem;
 }
 
 .attraction_text {
@@ -62,19 +94,24 @@
 	font-weight: 400;
 	font-style: normal;
 	line-height: 2rem;
+	font-size: 1rem;
 }
 
-.attraction_photo{
-	width: 50%;
+.tips{
+	padding: 0;
+	font-family: "IM Fell English", serif;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 4rem;
 }
 
-.tips,.cuisine-item{
+.cuisine-item{
+	padding: 0;
 	font-family: "IM Fell English", serif;
 	font-weight: 400;
 	font-style: normal;
 	line-height: 2rem;
 }
-
 
 /*layout*/
 .page_title_container {
@@ -218,7 +255,7 @@
 	position: relative;
 	flex: 0 0 100%;
 	width: 100%;
-	height: 40rem;
+	height: 30rem;
 	margin-bottom: 0;
 	background-image: url("css/background.webp");
 	counter-increment: item;
@@ -237,7 +274,26 @@
 	width: 100%;
 	height: 100%;
 	scroll-snap-align: center;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 50px;
  }
+
+.attraction {
+	grid-column: 1/span 2;
+	margin-top:25%;
+	margin-left: 10%;
+}
+
+.attraction_text {
+   grid-column: 1/span 1;
+}
+
+.attraction_photo {
+	width: 100%;
+	grid-column: 2/span 1;
+	margin-top:20%;
+}
 
  @media (hover: hover) {
 	.carousel__snapper {
@@ -311,21 +367,159 @@
 	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
  }
 
+/*tablet*/
+@media only screen and (min-width: 768px) and (max-width:1023px) {
+	.attractions_heading::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 50%;
+		width: 5%;
+		height: 50px;
+		background-color: #5AA597;
+	 }
 
-@media screen and (min-width: 1024px) {
-	#some-id {
-		color: red;
+	 .tips_heading::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 10%;
+		width: 8%;
+		height: 50px;
+		background-color: #5AA597;
+	 }
+
+	 .cuisine_heading::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 42%;
+		width: 7%;
+		height: 50px;
+		background-color: #5AA597;
+	 }
+	 .carousel__snapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		scroll-snap-align: center;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 50px;
+	 }
+
+	.attraction {
+		font-size:2.5rem;
+		grid-column: 1/span 2;
+		margin-top:15%;
+		margin-left: 15%;
+	}
+
+	.attraction_photo {
+		width: 100%;
+		grid-column: 2/span 1;
+		margin-top:40%;
+	}
+	.carousel::before,
+	.carousel::after,
+	.carousel__prev,
+	.carousel__next {
+	  margin-top: 35%;
 	}
 }
 
-@media screen and (min-width: 768px) and (max-width:1023px) {
-	#some-id {
-		color: blue;
+
+/*phone*/
+@media only screen and (max-width: 767px)  {
+	.webpage{
+		font-size:0.85rem;
+}
+   .page_title {
+	font-size: 4rem;
+	top: 30%;
+}
+.page_introduction {
+	line-height: 1.7rem;
+	margin-top: 10%;
+	}
+
+.attractions_heading,.tips_heading,.cuisine_heading {
+		font-size: 3rem;
+		margin-left: 3%;
+	}
+	.attractions_heading::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 45%;
+		width: 15%;
+		height: 40px;
+		background-color: #5AA597;
+	 }
+
+	 .tips_heading::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 14%;
+		width: 8%;
+		height: 40px;
+		background-color: #5AA597;
+	 }
+
+	 .cuisine_heading::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 43%;
+		width: 14%;
+		height: 40px;
+		background-color: #5AA597;
+	 }
+	 .attraction {
+		font-family: "IM Fell English SC", serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 1.5rem;
+	}
+
+	.attraction_text {
+		font-family: "IM Fell English", serif;
+		font-weight: 400;
+		font-style: normal;
+		line-height: 1.6rem;
+		font-size: 0.8rem;
+	}
+
+	.carousel__snapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		scroll-snap-align: center;
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 0px;
+	 }
+
+	.attraction {
+		margin-top:5%;
+		margin-left: 10%;
+	}
+
+	.attraction_photo {
+		width: 100%;
+		grid-column: 1/span 1;
+		margin-top:0%;
+	}
+	.carousel::before,
+	.carousel::after,
+	.carousel__prev,
+	.carousel__next {
+	  margin-top: 40%;
 	}
 }
 
-@media screen and (max-width: 767px)  {
-	#some-id {
-		color: yellow;
-	}
-}

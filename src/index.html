@@ -16,15 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Kings&display=swap" rel="stylesheet">
-  <!--
-		You can connect the CSS to the HTML here,
-		inside the head tag. Here is an example:
-		https://www.w3schools.com/tags/tag_link.asp
 
-		Your CSS is inside the css folder in this project,
-		so you will link to "css/style.css" instead of just
-		"style.css". The css/ represents the folder.
-	-->
 </head>
 <body>
 	<section class="webpage">
@@ -36,14 +28,14 @@
 		<p class="page_introduction">Welcome to this historic magical continent. The beautifully untouched snowy mountains, rainforests, waterfalls and volcanoes are waiting to be explored...but do watch out for the wandering monsters! Click <a href="https://www.ign.com/maps/the-legend-of-zelda-tears-of-the-kingdom/hyrule"> here </a>for the map</p>
 
 	   <h2 class="attractions_heading">Top Attractions</h2>
-		   <section class="carousel">
+		   <div class="carousel">
 			   <ol class="carousel__viewport">
 			      <li id="carousel__slide1"
 					    tabindex="0"
 					    class="carousel__slide">
 				      <div class="carousel__snapper">
 					      <ol>
-				            <li class="attraction_1">Goron City
+				            <li class="attraction">Goron City
 				      	      <p class="attraction_text">Nestled at the foot of a volcano,
 		                     the city is famous for its open-air
 		                     hot springs and barbecues. Don't
@@ -67,7 +59,7 @@
 					  class="carousel__slide">
 				      <div class="carousel__snapper">
 					      <ol>
-				            <li class="attraction_2">Satori Mountain
+				            <li class="attraction">Satori Mountain
 					            <p class="attraction_text">Come here to see the most beautiful cherry blossom tree in the entire continent. Located in the southwest of Hyrule, Satori Mountain is a natural reserve for flora and fauna.
 		                     It is said that by offering a piece of
 		                     fruit to the altar on the mountain top,
@@ -88,7 +80,7 @@
 					    class="carousel__slide">
 				      <div class="carousel__snapper">
 					      <ol>
-				            <li class="attraction_3">Temple of Time
+				            <li class="attraction">Temple of Time
 					            <p class="attraction_text">Behold, the spectacular clock tower from 10,000 years ago. History is
 		                     touchable here. Since it's located on
 		                     the sky island, you can look down on
@@ -111,7 +103,7 @@
 					    class="carousel__slide">
 				      <div class="carousel__snapper">
 					      <ol>
-				            <li class="attraction_4">Lurelin Village
+				            <li class="attraction">Lurelin Village
 				             	<p class="attraction_text">It has a intoxicating tropical scenery,
 		                     as well as the most welcoming and
 		                     friendly villagers. You may enjoy the
@@ -134,7 +126,7 @@
 					    class="carousel__slide">
 				      <div class="carousel__snapper">
 				      	<ol>
-			               <li class="attraction_5">Hebra Mountain
+			               <li class="attraction">Hebra Mountain
 					            <p class="attraction_text">Hebra Mountain is famous for its ski resorts, but do you know that it is also a destination for explorers?
 		                     In addition to the dangerous climate,
 		                     there are intricate caves, mysterious
@@ -149,7 +141,9 @@
 					   class="carousel__prev">Go to previous slide</a>
 				      <a href="#carousel__slide1"
 					   class="carousel__next">Go to first slide</a>
-		    </section>
+			      </li>
+            </ol>
+			</div>
 
       <h2 class="tips_heading">Tips</h2>
       <div class="tips">
